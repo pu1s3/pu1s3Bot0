@@ -14,6 +14,6 @@ module.exports = class AvatarCommand extends BaseCommand {
       .setTitle(mentionedMember.user.tag + "'s Avatar")
       .setImage(mentionedMember.user.displayAvatarURL());
 
-    message.channel.send(embed);
+    message.channel.send({ embeds: [embed] });
   }
 }
