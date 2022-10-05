@@ -1,8 +1,15 @@
 
-const { Client } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+	],
+});
 const { registerCommands, registerEvents } = require('./utils/registry');
 const config = require('../slappey.json');
-const client = new Client();
 client.snipes = new Map();
 
 (async () => {
