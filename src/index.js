@@ -12,4 +12,3 @@ client.snipes = new Map();
   await registerEvents(client, '../events');
   await client.login(process.env.DISCORD_BOT_TOKEN);
 })();
-
