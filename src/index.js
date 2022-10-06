@@ -1,5 +1,5 @@
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: 3276799 });
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const { registerCommands, registerEvents } = require('./utils/registry');
 const config = require('../slappey.json');
 client.snipes = new Map();
